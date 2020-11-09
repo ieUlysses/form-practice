@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class="form">
+        <form>
+        <form onsubmit="addToTable(event)">
+        <h1 class="header">Welcome to our apointment scheduler</h1>
+        <div class="question-1">
+            <!-- <legend>Tell us about your car</legend> -->
+                <label for="auto-registration" > Car registration </label> 
+                <input type="text" id="auto-registration"  name="auto-registration">
+        </div>
+
+        <div class="question-2">
+            <legend>Select your make and model</legend> <br>
+            <div class="make-model-holder">
+                <label for="make"> </label>
+                <select id="make">
+                    <option value="peugoet">Peugoet</option>
+                    <option value="alfa-romeo">Alfa-Romeo</option>
+                    <option value="vauxhall">Vauxhall</option>
+                    <option value="subaru">Subaru</option>
+                </select>
+                <select id="model">
+                    <option value="peugoet">206cc</option>
+                    <option value="alfa-romeo">Brera</option>
+                    <option value="vauxhall">Insignia</option>
+                    <option value="subaru">Forester</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="question-3">
+            <label for="final-question" >Have you been with us before? </label>
+            <input type="radio" id="been-here-before"  name="been-here-before">
+        </div>
+
+        <div class="termin">
+            <label for="termin">Termin</label>
+                <input type="date" id="termin" name="termin" min="1900-01-01" max="2021-01-01">
+        </div>
+        
+        <div class="submit">
+            <input type="submit" value="submit" class="button">
+        </div>
+
+    </form>
+</section>
+</body>
+</html>

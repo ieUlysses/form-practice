@@ -1,0 +1,147 @@
+* {
+    text-align: center;
+    border-radius: 25px;
+}
+body {
+    background-image: url(/images/markus-spiske-9ODroua12j4-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+form {
+    -webkit-box-shadow: -5px -5px 18px 1px rgba(182, 48, 48, 0.75);
+    -moz-box-shadow:    -5px -5px 18px 1px rgba(197, 46, 46, 0.75);
+    box-shadow:         -5px -5px 18px 3px rgba(218, 63, 63, 0.75);
+    font-size: 1.5em;
+    margin: 5%;
+    padding: 1%;
+    height: 80vh;
+    width: 40vw;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header         header      header"
+    "question-1     .           question-2"
+    ".              question-3  ."
+    ".              termin      ."
+    ".              submit      .";
+}
+
+.header{
+    grid-area: header;
+}
+
+.header {
+    font-family: 'Racing Sans One', cursive;
+}
+
+.question-1 {
+    grid-area: question-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Roboto Slab', serif;
+}
+
+.question-1 > input {
+    height: 25%;
+    font-family: 'Roboto Slab', serif;
+}
+
+.question-2 {
+    grid-area: question-2;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Slab', serif;
+}
+
+.make-model-holder > select {
+    height: 100%;
+    font-family: 'Roboto Slab', serif;
+}
+
+.question-3 {
+    grid-area: question-3;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Slab', serif;
+}
+.question-3 > input{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto Slab', serif;
+}
+
+.termin {
+    grid-area: termin;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Slab', serif;
+}
+.termin > input {
+    height: 25%;
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+}
+
+.submit {
+    grid-area: submit;
+    font-family: 'Roboto Slab', serif;
+}
+
+.submit > input{
+    background-color: skyblue;
+    width: 100%;
+    height: 150%;
+    font-size: medium;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    body {
+        background-image: url(/images/gary-sandoz-IYMIZxJLtpg-unsplash.jpg);
+    }
+
+    form {
+        background-color: silver;
+        opacity: 85%;
+        margin: 5%;
+        padding: 1%;
+        height: 80vh;
+        width: 75vw;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header"
+        "question-1"
+        "question-2"
+        "question-3"                      
+        "termin"
+        "submit";
+}
+    .question-1{
+        grid-area: question-1;
+    }
+
+    .question-2 {
+        grid-area: question-3;
+    }
+
+    .question-3 {
+        grid-area: question-2;
+    }
+
+    .termin {
+        grid-area: termin;
+    }
+
+    .submit {
+        grid-area: submit;
+    }
+
+}
